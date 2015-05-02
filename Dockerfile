@@ -69,6 +69,7 @@ VOLUME ["/config", "/web", "/logs"]
 
 # Add our crontab file
 ADD crons.conf /root/crons.conf
+ADD index.php /root/index.php
 # Use the crontab file
 
 
@@ -83,7 +84,7 @@ RUN mkdir /etc/service/inotify
 ADD inotify.sh /etc/service/inotify/run
 RUN chmod +x /etc/service/inotify/run
 
-RUN mkdir /var/www/snarf
+
 
 # Add apache to runit
 RUN mkdir /etc/service/apache
