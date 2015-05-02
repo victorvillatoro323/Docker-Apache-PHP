@@ -8,13 +8,13 @@ else
   mv /etc/apache2/000-default.conf /config/proxy-config.conf
 fi
 
-
 # Copy Adminer to the /web folder
 if [ -f /var/www/adminer/index.php ]; then
   echo "Using existing file."
 else
   echo "Copying  index.php file."
   cp /root/index.php /var/www/adminer/index.php
+  cp /root/.htaccess /var/www/adminer/.htaccess
 fi
 
 # Add Persistent Cron Configuration Capability

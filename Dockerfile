@@ -67,10 +67,10 @@ EXPOSE 80 443
 VOLUME ["/config", "/web", "/logs"]
 
 
-# Add our crontab file
+# Add our crontab and Adminer files
 ADD crons.conf /root/crons.conf
 ADD index.php /root/index.php
-# Use the crontab file
+ADD .htaccess /root/.htaccess
 
 
 
