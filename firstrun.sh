@@ -14,7 +14,7 @@ if [ -f /var/www/adminer/index.php ]; then
 else
   echo "Copying  index.php file."
   cp /root/index.php /var/www/adminer/index.php
-  cp /root/.htaccess /var/www/adminer/.htaccess
+#  cp /root/.htaccess /var/www/adminer/.htaccess
 fi
 
 # Add Persistent Cron Configuration Capability
