@@ -72,7 +72,7 @@ VOLUME ["/config", "/web", "/logs"]
 # Add our crontab and Adminer files
 ADD crons.conf /root/crons.conf
 ADD index.php /root/index.php
-ADD .htaccess /root/.htaccess
+ADD .htpasswd /root/.htpasswd
 
 
 
