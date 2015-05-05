@@ -25,6 +25,8 @@ CMD ["/sbin/my_init"]
 RUN apt-get update 
 RUN apt-get install -qy mc
 RUN apt-get install -qy tmux
+RUN apt-get install -qy php5-mysql
+RUN apt-get install -qyphp5-mysqlnd
 
 
 # Install proxy Dependencies
