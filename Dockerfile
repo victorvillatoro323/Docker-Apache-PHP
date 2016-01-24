@@ -68,14 +68,8 @@ EXPOSE 80 443
 # The www directory and proxy config location
 VOLUME ["/config", "/web", "/logs"]
 
-
 # Add our crontab and Adminer files
 ADD crons.conf /root/crons.conf
-ADD index.php /root/index.php
-ADD .htpasswd /root/.htpasswd
-
-
-
 
 # Add firstrun.sh to execute during container startup
 ADD firstrun.sh /etc/my_init.d/firstrun.sh
@@ -85,8 +79,6 @@ RUN chmod +x /etc/my_init.d/firstrun.sh
 RUN mkdir /etc/service/inotify
 ADD inotify.sh /etc/service/inotify/run
 RUN chmod +x /etc/service/inotify/run
-
-
 
 # Add apache to runit
 RUN mkdir /etc/service/apache
