@@ -32,7 +32,7 @@ RUN apt-get install -qy php5-mysqlnd
 # Install proxy Dependencies
 RUN \
   apt-get update -q && \
-  apt-get install -qy apache2 php php5-common curl libcurl3 php5-curl libapache2-mod-php5 php-xml-parser php5-gd php5-sqlite php5-mcrypt php5-tidy php5-cli php5-mysql inotify-tools libapache2-mod-proxy-html && \
+  apt-get install -qy apache2 php7 php5-common curl libcurl3 php5-curl libapache2-mod-php5 php-xml-parser php5-gd php5-sqlite php5-mcrypt php5-tidy php5-cli php5-mysql inotify-tools libapache2-mod-proxy-html && \
   apt-get clean -y && \
   rm -rf /var/lib/apt/lists/*
  
