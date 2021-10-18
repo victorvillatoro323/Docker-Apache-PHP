@@ -25,14 +25,14 @@ CMD ["/sbin/my_init"]
 RUN apt-get update 
 RUN apt-get install -qy mc
 RUN apt-get install -qy tmux
-RUN apt-get install -qy php8.0-mysql
-RUN apt-get install -qy php8.0-mysqlnd
+RUN apt-get install -qy php-mysql
+RUN apt-get install -qy php-mysqlnd
 
 
 # Install proxy Dependencies
 RUN \
   apt-get update -q && \
-  apt-get install -qy apache2 php8.0 php8.0-common curl libcurl3 php8.0-curl libapache2-mod-php8.0 php-xml-parser php8.0-gd php8.0-sqlite php8.0-mcrypt php8.0-tidy php8.0-cli php8.0-mysql inotify-tools libapache2-mod-proxy-html && \
+  apt-get install -qy apache2 php php-common curl libcurl3 php-curl libapache2-mod-php php-xml-parser php-gd php-sqlite php-mcrypt php-tidy php-cli php-mysql inotify-tools libapache2-mod-proxy-html && \
   apt-get clean -y && \
   rm -rf /var/lib/apt/lists/*
  
