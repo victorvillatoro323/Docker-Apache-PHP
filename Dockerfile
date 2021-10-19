@@ -29,7 +29,7 @@ RUN apt-get install -qy tmux
 # Install proxy Dependencies
 RUN \
   apt-get update -q && \
-  apt-get install php && \
+  apt-get install -qy apache2 php && \
   apt clean -y && \
   rm -rf /var/lib/apt/lists/*
  
