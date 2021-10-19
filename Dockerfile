@@ -1,4 +1,4 @@
-FROM phusion/baseimage:0.9.15
+FROM phusion/baseimage:1.0.0
 MAINTAINER VV
 
 # Set correct environment variables
